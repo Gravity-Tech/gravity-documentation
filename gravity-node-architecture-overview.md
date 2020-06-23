@@ -1,13 +1,13 @@
 # Gravity Node Architecture overview
 
-1. Gravity node system types.
-2. Tendermint nodes.
-3. Blockchain accounts.
-4. Schedulers.
-5. Ledger nodes.
-6. Communicators.
-7. CLI interface.
-8. Extractors.
+1. Gravity node system types
+2. Tendermint nodes
+3. Blockchain accounts
+4. Schedulers
+5. Ledger nodes
+6. Communicators
+7. CLI interface
+8. Extractors
 
 ## Gravity node system types
 
@@ -15,16 +15,16 @@
 
 
 
-Types namespace contains _global_ and _reusable_ interfaces/types that are being used all over the application. If type doesn't conform to specific client interface the _inheritance_ should be used. Consider such common types as:
+The Types Namespace contains _global_ and _reusable_ interfaces/types that are used universally in the application. If a type does not conform to a specific client interface, _inheritance_ should be used. The most common types are listed below:
 
 | Name | Description |
 | :--- | :--- |
 | **SchedulerTask** | represents task management entity for **MainScheduler** |
-| **Asset** | common type for asset representation in specific blockchain. |
-| **Account** | common type for account/address representation in specific blockchain. Must have at least address, private & public keys. |
+| **Asset** | common type for asset representation in a specific blockchain |
+| **Account** | common type for account/address representation in a specific blockchain. Must have an address, private & public keys. |
 | **Data** | `[]bytes` type alias |
 | **Price** | common type for price data |
-| **BinancePrice** | type \(price subtype\) that represents only binance price data |
+| **BinancePrice** | type \(price subtype\) that represents Binance price data |
 
 ## Tendermint node types
 
