@@ -1,13 +1,4 @@
-# Gravity Node Architecture overview
-
-1. Gravity node system types
-2. Tendermint nodes
-3. Blockchain accounts
-4. Schedulers
-5. Ledger nodes
-6. Communicators
-7. CLI interface
-8. Extractors
+# Gravity Node Architecture
 
 ## Gravity node system types
 
@@ -50,15 +41,15 @@ Dictionary contains available list of concrete blockchain accounts for instantia
 
 ![](.gitbook/assets/scheduler.png)
 
-Controller for task management. By design GH node needs only one task scheduler - **MainScheduler**. Basic FIFO allows sequential tasks submission & execution. 
+Controller for task management. By design GH node needs only one task scheduler: **MainScheduler**. Basic FIFO allows for submission & execution of sequential tasks.
 
 Methods reference:
 
 1. getInstance - allows to access reference to global MainScheduler instance
 2. getCurrentTask - returns current task
-3. scheduleTask - adds task to queue, returns the result\(either added successfuly or not\)
+3. scheduleTask - adds task to queue, returns the result \(either added successfuly or not\)
 
-The usability is provided by usage of _Singleton pattern_.
+The usability is provided by the usage of a _Singleton pattern_.
 
 ## Ledger nodes \(Core\)
 
@@ -90,5 +81,5 @@ CLI interface provides access to methods available for client:
 
 ![](.gitbook/assets/extractors.png)
 
-Extractor operate by **Bridge pattern**. The problem is exactly similar to communicator's entity. However, if there was a chain requirement, _the extractor interface is solely declared by GH node_. It helps to distinct specific data extractors.
+Extractors operate by **Bridge pattern**. The problem is exactly similar to communicator's entity. However, if there was a chain requirement, _the extractor interface is solely declared by GH node_. It helps to distinct specific data extractors.
 
