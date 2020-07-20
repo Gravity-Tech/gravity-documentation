@@ -21,7 +21,7 @@ The Types Namespace contains _global_ and _reusable_ interfaces/types that are u
 
 ![](.gitbook/assets/tendermint.png)
 
-Tendermint offers BFT algorithm usage. Has its own API. We can communicate with its nodes by RPC protocol. Has its own system types. \(**Commit**, **Block**, **Validator**, **Evidence**\)
+Tendermint offers BFT algorithm usage and has its own API. It is possible to communicate with Tendermint nodes via the RPC protocol. Tendermint also has its own system types. \(**Commit**, **Block**, **Validator**, **Evidence**\)
 
 Models reference:
 
@@ -31,31 +31,31 @@ Models reference:
 
 ![](.gitbook/assets/b-accounts.png)
 
-Namespace for account management \(store, delete, update\) for distinct chain. Must conform to **Account** type by design. Communication is provided using _Factory Method_ design pattern.
+There is a separate namespace for account management \(store, delete, update\) for each distinct chain. It must conform to the **Account** type by design. Communication is provided using the _Factory Method_ design pattern.
 
-In a nutshell, distinct account creation is made by calling separate method.
+In a nutshell, creation of a new account is made by calling a separate method.
 
-Dictionary contains available list of concrete blockchain accounts for instantiation.
+The dictionary contains the available list of concrete blockchain accounts for instantiation.
 
 ## Schedulers
 
 ![](.gitbook/assets/scheduler.png)
 
-Controller for task management. By design GH node needs only one task scheduler: **MainScheduler**. Basic FIFO allows for submission & execution of sequential tasks.
+Controller for task management. By design, Gravity node only needs one task scheduler: **MainScheduler**. Basic FIFO allows for submission & execution of sequential tasks.
 
 Methods reference:
 
 1. getInstance - allows to access reference to global MainScheduler instance
 2. getCurrentTask - returns current task
-3. scheduleTask - adds task to queue, returns the result \(either added successfuly or not\)
+3. scheduleTask - adds task to queue, returns the result
 
 The usability is provided by the usage of a _Singleton pattern_.
 
 ## Ledger nodes \(Core\)
 
-Ledger node can be considered as wrapper of _Tendermint_. That is why ledger node connection to tendermint API is _composed of_  of _tendermint_ because it cannot exist without it or  that ledger node is _tightly coupled_.
+A ledger node can be considered as a wrapper of _Tendermint_. Therefore, a ledger node's connection and the Tendermint API are _tightly coupled_.
 
-Ledger node declares methods that allow GH node to communicate with each other for different purposes: 1. Reaching consensus 2. Gravity score 3. Validation of data
+A ledger node declares methods that allow a Gravity node to communicate with each other for different purposes: 1. Reaching consensus 2. Gravity score 3. Validation of data
 
 ## Communicators
 
