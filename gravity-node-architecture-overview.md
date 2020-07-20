@@ -61,9 +61,9 @@ A ledger node declares methods that allow a Gravity node to communicate with eac
 
 ![](.gitbook/assets/communicators.png)
 
-Allow to communicate with specific chains. The most important
+Allows for communication with specific chains. 
 
-The usage must provided by _Bridge pattern_ due to existence specific environment in most chains. **Ethereum** has several network with different conditions. However, the API is still the same. Such behaviour is suitable for _Bridge pattern_. We are not tight for a specific implementation. Distinction of interfaces provide ease of expanding.
+Communicators use the _Bridge pattern_ due to existence of a specific environment in most chains. **Ethereum** has several networks with different conditions but similar API. Such behaviour is what the _Bridge pattern_ is well-suited for. 
 
 ## CLI interface
 
@@ -81,5 +81,5 @@ CLI interface provides access to methods available for client:
 
 ![](.gitbook/assets/extractors.png)
 
-Extractors operate by **Bridge pattern**. The problem is exactly similar to communicator's entity. However, if there was a chain requirement, _the extractor interface is solely declared by GH node_. It helps to distinct specific data extractors.
+Extractors are constructed based on the **Bridge pattern**. The problem is exactly similar to communicator's entity. However, if there was a specific requirement, _the extractor interface is solely declared by Gravity node_. It helps to distinguish specific data extractors.
 
