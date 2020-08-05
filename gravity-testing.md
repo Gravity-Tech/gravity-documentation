@@ -1,0 +1,17 @@
+# Gravity Unit Testing
+
+| id | Unit | Sub-unit | Test Action | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Waves-Origin-ETH-Destination Nebula | Pulse-TX | A pulse transaction with data hashes and corresponding signatures of accounts from the whitelist arrives into the Ethereum nebula. | The hash value is written into the Storage and status is OK. |
+| 2 | Waves-Origin-ETH-Destination Nebula | USER-SC  | In the Nebula, the hash already has the OK status. The user's smart contract method is called on behalf of the nebula by an oracle. During the data transfer, the hash is calculated on the data and the nebula verifier validates the transaction. If the hash is valid, it is sent to the USER-SC. | The USER-SC gets the data into itself by calling an external method. |
+| 3 | ETH-Origin-Waves-Destination Nebula | Pulse-TX | A pulse transaction with data hashes and corresponding signatures of accounts from the whitelist arrive into the Waves nebula. | The hash value is written into the Storage and status is OK. |
+| 4 | ETH-Origin-Waves-Destination Nebula | USER-SC  | In the Nebula, the hash already has the OK status. The user's smart contract method is called on behalf of the nebula by an oracle. During the data transfer, the hash is calculated on the data and the nebula verifier validates the transaction. If the hash is valid, it is sent to the USER-SC. | The USER-SC gets the data into itself by calling an external method.  |
+| 5 | Waves-Origin-ETH-Destination Extractor-Aggregator | Extraction | The state is mocked, including request ids that have already been processed, the block that is relevant for the request, the set of blocks with arrays of transactions, which address is being tracked on the incoming transactions\). In addition, external json data with an array of blocks, transactions, and data in them is mocked.  | if a new registered swap request is not found in the state, it should be written into the state with the NEW status, which makes it possible to then access it externally. |
+| 6 | Waves-Origin-ETH-Destination Extractor-Aggregator | Aggregation | Inbound data \(request id, amount, receiver\) from other nodes are mocked.  | Aggregation \(value calculation\) is performed. If more than 2/3 have the same result, it is given as a mod \(the most frequent value among peers\). The aggregation result is written into the internal state with the NEW status.  |
+| 7 | Waves-Origin-ETH-Destination Extractor-Aggregator | Extraction Finalize | A mocked ETH-Destination blockchain is monitored and the status of the request-id is searched. | If the request-id status if found, then it is written into the extractor's state as DONE.  |
+| 8 | Waves-Origin-ETH-Destination Finalization Nebula | Pulse-TX | A mocked ETH-Destination blockchain is monitored. If it has a record of transfer transaction, this fact is written to the Waves Nebula. | The result in the Waves Nebula about the transfer status exists. |
+| 9 | ETH-Origin-Waves-Destination Extractor-Aggregator | Extraction | Same as 5, but with other chains |  |
+| 10 | ETH-Origin-Waves-Destination Extractor-Aggregator | Aggregation Test  | Same as 6, but with other chains |  |
+| 11 | ETH-Origin-WAVES-Destination Extractor-Aggregator | Extraction Finalization Test  | Same as 7, but with other chains |  |
+| 12 | ETH-Origin-WAVES-Destination Finalization Nebula | Pulse-TX Test | Same as 8, but with other chains |  |
+
