@@ -13,7 +13,7 @@ We highly recommend that you open pull requests in specific repositories mention
 
 The first alpha product built on top of Gravity is SuSy, a protocol and interface for crosschain gateways with the Waves as origin and Binance Smart Chain as the destination chain. SuSy mainnet alpha is currently live at susy.gravity.tech and provides an interface that allows users to swap USDN tokens from Waves into BSC. USDNs on BSC incorporate an identical functionality as on Ethereum, including auto-staking, elastic supply, and staking rewards that are automatically distributed among all holders. SuSy is a second layer protocol over[ Gravity](https://gravity.tech/), and it prescribes an implementation of cross-chain transfers of digital assets \(tokens\) in blockchain networks that support smart contracts, focused primarily on popular blockchains with varying architectures, consensuses and cryptography. SuSy is centered exclusively around technical implementation of transfers, without bringing any incentive models for cross-chain transfer providers.
 
-### SuSy Protocol
+## SuSy Protocol
 
 The SuSy protocol is based on trust in the oracle, which is an intermediary in the transfer of information from one blockchain to another. From a technical standpoint, when implementing the oracle as a trustless decentralized system, which is what the[ Gravity](https://arxiv.org/abs/2007.00966) protocol does, cross-chain gateways on top of it inherit the trustlessness. Another feature of the SuSy protocol implementation over the Gravity oracle protocol is the presence of useful high-level abstractions and services.
 
@@ -63,14 +63,14 @@ Likewise, data about this event is handled by Gravity network oracles, and, cont
 
 In the opposite direction, for transferring the swT token from DESTINATION CHAIN ​​to ORIGIN CHAIN ​​and unlocking T on the LU PORT contract, the procedure is similar. The only difference is in the final transactions, that is, burning the swT token on IB PORT and unlocking the T token on LU PORT, are reversed.
 
+## Smart Contracts
+
 As regards extending the SuSy dApp onto other blockchains, USER-SC plays the role of IB \(Issue-Burn\) and LU \(Lock-Unlock\) ports. USER-SC methods are meant to be invoked by NEBULA-SC. So, in order to have a working application on top of the protocol, you need to:
 
 1. Provide NEBULA-SC, SYSTEM-SC \(gravity contract\) inside the Gravity-Tech/gravity-core/contracts.
 2. Create a custom USER-SC, which corresponds to your custom NEBULA-SC.
 
-### The Core part
-
-To ensure compatibility with a new chain, a set of separate smart contracts is required. More importantly, there are two types of contracts: those used by the core of Gravity and application-specific contracts \(e.g. SuSy\). 
+Therefore, to ensure compatibility with a new chain, a set of separate smart contracts is required. More importantly, there are two types of contracts: those used by the core of Gravity and application-specific contracts \(e.g. SuSy\). 
 
 An example of an IB Port for Ethereum and Waves is below: [https://github.com/Gravity-Tech/gateway/blob/main/contracts/ethereum/IBPort.sol](https://github.com/Gravity-Tech/gateway/blob/main/contracts/ethereum/IBPort.sol) 
 
@@ -91,6 +91,8 @@ For all statements 1-4, an API must be implemented \(open and public\).
 Consider checking the “contracts” directory inside the Gravity-Tech/gateway repository to see examples of gateway contracts’ source code.
 
 After creating the contracts, they need to be compiled into bytecode. The compiled bytecode files should be put into the “/abi” directory.
+
+## Adaptors
 
 In order to add an implementation for any new chain, it must first be supported by the Gravity Network itself. After completing the smart contracts, it is necessary to implement core adaptors within the [gravity-core](https://github.com/Gravity-Tech/gravity-core) repository. 
 
@@ -141,13 +143,13 @@ Here, chain behaviour regarding account address instantiation is specified.
 
 This part is responsible for parsing of consul keys.
 
-### The Oracle component
+## The Oracle component
 
 #### oracle/node/node.go
 
 A crucial part of Gravity Oracle. node.go, as well as the entire oracle/node module, describes existing implementations and sets up oracle constraints.
 
-### Reference
+## Reference
 
 1. [https://github.com/Gravity-Tech/gateway](https://github.com/Gravity-Tech/gateway)
 2. [https://github.com/Gravity-Tech/gravity-core](https://github.com/Gravity-Tech/gravity-core)
