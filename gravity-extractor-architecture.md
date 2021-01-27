@@ -1,4 +1,4 @@
-# Gravity Extractor Architecture
+# \[DEPRECATED\] Gravity Extractor Architecture
 
 ### Abstract
 

@@ -1,4 +1,4 @@
-# Gravity Node Architecture
+# \[DEPRECATED\] Gravity Node Architecture
 
 ## Gravity node system types
 
