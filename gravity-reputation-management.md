@@ -13,7 +13,7 @@ In the Gravity network, node ratings are calculated in the internal ledger and d
 The following entities are involved in the rating update process:
 
 * _GravityScore_ represents a node's rating. It is being updated in the Gravity ledger and then fed into the target blockchains.
-* _p2pScores_ is an object that contains mutual evaluation of nodes.
+* _p2pScores_ is an object that contains a mutual evaluation of nodes.
 * _Behaviour_ is a value calculated by a node for another participant that contains information about its behaviour for a specific period of time.
 
 These objects participate in the following sequence of actors' actions:
@@ -38,7 +38,7 @@ Each node collects information known to it about the behaviour of other particip
 * Feed accuracy
 * Nebula update
 * System contract update
-* Gravity legder update
+* Gravity ledger update
 * Initial locked amount
 
 The node records the number of successful and unsuccessful actions for each known participant.
@@ -47,7 +47,7 @@ The node records the number of successful and unsuccessful actions for each know
 
 After the time specified in the settings has expired, the node calculates the $$Behaviour$$ vector containing the opinion about the behavior of all participants.
 
-The $$i$$node in relation to the $$j$$node calculates, summing up the elementary actions:
+The $$i$$node in relation to the $$j$$node executes calculations, summing up the elementary actions:
 
 $$
 Behaviour_{ij} = \sum feedAccuracy_{ij} + \sum nebulaUpdate_{ij} + \ ...\  +\sum ledgerUpdate_{ij}
@@ -93,7 +93,7 @@ $$p2pScores_{ij} = 0$$
 
 After the $$p2pScore$$ update, the node sends the transaction with the actual data to the Gravity ledger.
 
-**Update GravityScore in Grabity Ledger**
+**Update GravityScore in Gravity Ledger**
 
 The Round Leader updates the rating when creating the block by calculating each participant's rating according to the EigenTrust algorithm and actual p2pScores values:
 
@@ -105,7 +105,7 @@ Updating the GravityScore in the Gravity ledger is a costless operation, so the 
 
 **Update GravityScore in System Contract**
 
-Updated ratings are transferred by participants to SystemContract in target chains.
+The updated ratings are transferred by participants to SystemContract in target chains.
 
-In contrast to internal rankings updates, frequent upgrades in target chain can be costly. In order to reduce costs, a mixed approach can be used: not frequent fixed period of rating update\(1h,6h, etc.\) and update that triggers a significant change of participants' GravityScore.
+In contrast to internal rankings updates, frequent upgrades in target chain can be costly. In order to reduce costs, a mixed approach can be used: an infrequent fixed period of rating update \(1h,6h, etc.\) and an update that triggers a significant change of participants' GravityScore.
 
