@@ -1,5 +1,5 @@
 ---
-description: This page contains automatically generated UMLs for Gravity Core.
+description: This page contains UMLs for Gravity Core (uses PlantUML format).
 ---
 
 # Gravity Core UMLs
