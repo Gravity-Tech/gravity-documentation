@@ -2,7 +2,7 @@
 
 ## Gravity node system types
 
-![](.gitbook/assets/gh-node-types.png)
+![](../.gitbook/assets/gh-node-types.png)
 
 
 
@@ -19,7 +19,7 @@ The Types Namespace contains _global_ and _reusable_ interfaces/types that are u
 
 ## Tendermint node types
 
-![](.gitbook/assets/tendermint.png)
+![](../.gitbook/assets/tendermint.png)
 
 Tendermint offers BFT algorithm usage and has its own API. It is possible to communicate with Tendermint nodes via the RPC protocol. Tendermint also has its own system types. \(**Commit**, **Block**, **Validator**, **Evidence**\)
 
@@ -29,7 +29,7 @@ Models reference:
 
 ## Blockchain accounts
 
-![](.gitbook/assets/b-accounts.png)
+![](../.gitbook/assets/b-accounts.png)
 
 There is a separate namespace for account management \(store, delete, update\) for each distinct chain. It must conform to the **Account** type by design. Communication is provided using the _Factory Method_ design pattern.
 
@@ -39,7 +39,7 @@ The dictionary contains the available list of concrete blockchain accounts for i
 
 ## Schedulers
 
-![](.gitbook/assets/scheduler.png)
+![](../.gitbook/assets/scheduler.png)
 
 Controller for task management. By design, Gravity node only needs one task scheduler: **MainScheduler**. Basic FIFO allows for submission & execution of sequential tasks.
 
@@ -59,7 +59,7 @@ A ledger node declares methods that allow a Gravity node to communicate with eac
 
 ## Communicators
 
-![](.gitbook/assets/communicators.png)
+![](../.gitbook/assets/communicators.png)
 
 Allows for communication with specific chains. 
 
@@ -67,7 +67,7 @@ Communicators use the _Bridge pattern_ due to existence of a specific environmen
 
 ## CLI interface
 
-![](.gitbook/assets/client-cli.png)
+![](../.gitbook/assets/client-cli.png)
 
 CLI interface provides access to methods available for client:
 
@@ -79,7 +79,7 @@ CLI interface provides access to methods available for client:
 
 ## Extractors
 
-![](.gitbook/assets/extractors.png)
+![](../.gitbook/assets/extractors.png)
 
 Extractors are constructed based on the **Bridge pattern**. The problem is exactly similar to communicator's entity. However, if there was a specific requirement, _the extractor interface is solely declared by Gravity node_. It helps to distinguish specific data extractors.
 
