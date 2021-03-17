@@ -1,4 +1,4 @@
-# Manual: Gravity Extractor one-click deployment
+# \[DEPRECATED\] Manual: Gravity Extractor one-click deployment
 
 ## Abstract
 

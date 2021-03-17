@@ -14,16 +14,33 @@ To interact with EVM-based source networks, users need to utilize web3 libraries
 
 * USDN
   * Waves 
-    * assetId: _DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p_
-    * lu-port: _3PEXiW1BrBNMo5A9dfj2CnBW2mwMiaf2sAe_
+    * assetId: DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p
+    * lu-port: 3PEXiW1BrBNMo5A9dfj2CnBW2mwMiaf2sAe
   * BSC
-    * token: [0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05](https://bscscan.com/token/0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05)
+    * token: 0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05
+    * ib-port: 0x8c0e11a6E692d02f71598AB5050083ED691Eb760
+* gwaNSBT
+  * Waves 
+    * assetId: 6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g
+    * lu-port: 3PRGPGtsVZVUCFRsEKp1FHccv6uFu8YNqb1
+  * BSC
+    * token: 0xaDb688CC2D5A729d7e5ddEcDA8B63ED118F41eA4
+    * ib-port: 0xf427525Eb648d14c1Da28E530e9fe7ab9832c411
+* NSBT Legacy
+  * Waves 
+    * assetId: 6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g
+    * lu-port: 3PPUsj1yjMMAAg2hihdebK7n8zkAagHqdNT
+  * BSC
+    * token: 0x496d451dDAB0F79346f773CbC2eb7Aee58446019
+    * ib-port: 0x59622815BADB181a2c37052136a9480C6A4a4eA6
 
 ## Contracts source
 
 * evm-based [ib-port](https://github.com/Gravity-Tech/gateway/blob/main/contracts/ethereum/IBPort.sol)
 * evm-based [token](https://github.com/Gravity-Tech/gateway/blob/main/contracts/ethereum/Token.sol)
 * waves-based [lu-port](https://github.com/Gravity-Tech/gateway/blob/main/contracts/waves/luport.ride)
+* evm-based [abi directory](https://github.com/Gravity-Tech/gateway/tree/main/abi/ethereum)
+* waves [base64 directory](https://github.com/Gravity-Tech/gateway/tree/main/abi/waves)
 
 ## Waves-BSC with waves-transactions
 
