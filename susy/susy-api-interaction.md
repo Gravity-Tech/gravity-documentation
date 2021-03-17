@@ -110,7 +110,7 @@ await ibportInstance.createTransferUnwrapRequest(amount, receiverHex)
 
 ## SuSy Swagger API
 
-[https://api.graviton.one](https://web3js.readthedocs.io/en/v1.3.4/)
+[https://api.graviton.one](https://api.graviton.one)
 
 ## 
 
