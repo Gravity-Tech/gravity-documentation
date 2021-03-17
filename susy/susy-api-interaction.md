@@ -16,6 +16,8 @@ To interact with EVM-based source networks, users need to utilize web3 libraries
   * Waves 
     * assetId: _DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p_
     * lu-port: _3PEXiW1BrBNMo5A9dfj2CnBW2mwMiaf2sAe_
+  * BSC
+    * token: [0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05](https://bscscan.com/token/0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05)
 
 ## Contracts source
 
