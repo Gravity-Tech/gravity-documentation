@@ -7,8 +7,11 @@
 * [Manual: Gravity Extractor one-click deployment](manual-gravity-extractor-one-click-deployment.md)
 * [How to add support for a new blockchain in Gravity Protocol](how-to-add-support-for-a-new-blockchain-in-gravity-protocol.md)
 * [Gravity Core UMLs](gravity-core-umls.md)
-* [Pools of SuSy-wrapped tokens](pools-of-susy-wrapped-tokens.md)
-* [SuSy API Interaction](susy-api-interaction.md)
 * [\[DEPRECATED\] Gravity Extractor Architecture](gravity-extractor-architecture.md)
 * [\[DEPRECATED\] Gravity Node Architecture](gravity-node-architecture-overview.md)
+
+## SuSy
+
+* [Pools of SuSy-wrapped tokens](susy/pools-of-susy-wrapped-tokens.md)
+* [SuSy API Interaction](susy/susy-api-interaction.md)
 

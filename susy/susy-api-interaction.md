@@ -35,14 +35,14 @@ const nodeUrl = 'https://nodes.wavesnodes.com';
 const seed = ""
 
 const luportAddress    = ""
-const recepientAddress = ""
+const recipientAddress = ""
 const usdnAssetId      = "DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p"
 const amount           = 100000
 
 const tx = invokeScript({dApp: luportAddress,
                          call: {function: "createTransferWrapRq",
                                 args: [{type: "string",
-                                        value: recepientAddress}]},
+                                        value: recipientAddress}]},
                          payment: [{assetId: usdnAssetId,
                                     amount:  amount}]},
                         seed)
