@@ -108,6 +108,10 @@ const ibportInstance = ibportContract.at(ibportAddress)
 await ibportInstance.createTransferUnwrapRequest(amount, receiverHex)
 ```
 
+## Go-based IB-port caller
+
+We provide a solution that allows for calling SuSy bridges using Golang. If you would like to integrate SuSy into your go pipeline, you can clone and use this repository: [https://github.com/Gravity-Tech/ibport-caller-go](https://github.com/Gravity-Tech/ibport-caller-go)
+
 ## SuSy Swagger API
 
 [https://api.graviton.one](https://api.graviton.one)
