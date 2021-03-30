@@ -4,11 +4,14 @@
 
 ## Tokens
 
-| Token | Network | Explorer Link | Notes |
-| :--- | :--- | :--- | :--- |
-| Wrapped Neutrino USD \(gwUSDN\) | BSC | [BSCScan](https://bscscan.com/token/0xc4b6f32b84657e9f6a73fe119f0967be5ba8cf05) |  |
-| Wrapped Neutrino Token \(gwaNSBT\) | BSC | [BSCScan](https://bscscan.com/token/0xadb688cc2d5a729d7e5ddecda8b63ed118f41ea4%20) | Wrapped Autostaking NSBT |
-| Legacy Wrapped Neutrino Token \(gwNSBT\) | BSC | - | **Deprecated, please use gwaNSBT** |
+| Token | Destination | Token in Origin Blockchain | Token in Destination Blockchain | Origin Port | Destination Port | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Legacy Neutrino Token \(wNSBT\) | Waves-BSC | [6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g](https://wavesexplorer.com/tx/6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g) | [0x496d451dDAB0F79346f773CbC2eb7Aee58446019](https://bscscan.com/address/0x496d451dDAB0F79346f773CbC2eb7Aee58446019) | [3PPUsj1yjMMAAg2hihdebK7n8zkAagHqdNT](https://wavesexplorer.com/address/3PPUsj1yjMMAAg2hihdebK7n8zkAagHqdNT/tx) | [0x59622815BADB181a2c37052136a9480C6A4a4eA6](https://bscscan.com/address/0x59622815BADB181a2c37052136a9480C6A4a4eA6) | **Deprecated, please use gwaNSBT** |
+| Autostaking Neutrino Token \(gwaNSBT\) | Waves-BSC | [6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g](https://wavesexplorer.com/tx/6nSpVyNH7yM69eg446wrQR94ipbbcmZMU1ENPwanC97g) | [0xaDb688CC2D5A729d7e5ddEcDA8B63ED118F41eA4](https://bscscan.com/address/0xaDb688CC2D5A729d7e5ddEcDA8B63ED118F41eA4) | [3PRGPGtsVZVUCFRsEKp1FHccv6uFu8YNqb1](https://wavesexplorer.com/address/3PRGPGtsVZVUCFRsEKp1FHccv6uFu8YNqb1/tx) | [0xf427525Eb648d14c1Da28E530e9fe7ab9832c411](https://bscscan.com/address/0xf427525Eb648d14c1Da28E530e9fe7ab9832c411) | \*\*\*\* |
+| SWOP Token \(gwSWOP\) | Waves-BSC | [Ehie5xYpeN8op1Cctc6aGUrqx8jq3jtf1DSjXDbfm7aT](https://bscscan.com/address/0xf427525Eb648d14c1Da28E530e9fe7ab9832c411) | [0x14B819B057078BbD87C5e5f65d54818f490701Ce](https://bscscan.com/address/0x14B819B057078BbD87C5e5f65d54818f490701Ce) | [3P3Fb6UCW3TB7TGK2BWsV6YfmoL3Y8bv1Km](https://wavesexplorer.com/address/3P3Fb6UCW3TB7TGK2BWsV6YfmoL3Y8bv1Km/tx) | [0xd6C8D0d800B9CbbAE0B13f6d41087bA3CCe797E6](https://bscscan.com/address/0xd6C8D0d800B9CbbAE0B13f6d41087bA3CCe797E6) |  |
+| SIGN Token  | Waves-BSC | [9sQutD5HnRvjM1uui5cVC4w9xkMPAfYEV8ymug3Mon2Y](https://wavesexplorer.com/tx/9sQutD5HnRvjM1uui5cVC4w9xkMPAfYEV8ymug3Mon2Y) | [0xb5e094AEC0D8f019497Bce712AF685aC15BD8c35](https://bscscan.com/address/0xb5e094AEC0D8f019497Bce712AF685aC15BD8c35) | [3PKKYSedPuFuExJCweD52mj1MtjJLT8da9g](https://wavesexplorer.com/address/3PKKYSedPuFuExJCweD52mj1MtjJLT8da9g/tx) | [0x072232c6B713024e04D596bf68f1B22AC123af7f](https://bscscan.com/address/0x072232c6B713024e04D596bf68f1B22AC123af7f) |  |
+| USDN Token \(gwUSDN\) | Waves-BSC | [DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p](https://wavesexplorer.com/tx/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p) | [0xc4b6F32B84657E9f6a73fE119f0967bE5bA8CF05](https://bscscan.com/address/0xc4b6F32B84657E9f6a73fE119f0967bE5bA8CF05) | [3PEXiW1BrBNMo5A9dfj2CnBW2mwMiaf2sAe](https://wavesexplorer.com/address/3PEXiW1BrBNMo5A9dfj2CnBW2mwMiaf2sAe/tx) | [0x8c0e11a6E692d02f71598AB5050083ED691Eb760](https://bscscan.com/address/0x8c0e11a6E692d02f71598AB5050083ED691Eb760) |  |
+| USDN Token \(gwUSDN\) | Waves-Heco | [DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p](https://wavesexplorer.com/tx/DG2xFkPdDwKUoBkzGAhQtLpSGzfXLiCYPEzeKH2Ad24p) | [0xa10C9B112504bdDBB8dA13ad90f26E6D379dD0e2](https://hecoinfo.com/address/0xa10C9B112504bdDBB8dA13ad90f26E6D379dD0e2) | [3P7DNKjZ5RB1YM4V4t1yTwDmsbjDkQ7aePD](https://wavesexplorer.com/address/3P7DNKjZ5RB1YM4V4t1yTwDmsbjDkQ7aePD/tx) | [0x649b35580EF2a15abF595df626b45aCeBd818882](https://hecoinfo.com/address/0x649b35580EF2a15abF595df626b45aCeBd818882) |  |
 
 ## Pools
 
