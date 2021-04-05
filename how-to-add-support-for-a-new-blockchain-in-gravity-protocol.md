@@ -49,8 +49,6 @@ SUSY-GATEWAY is a set of services and smart contracts that support the transfer 
 
 Below is the description of SuSy cross-chain transfer algorithm that uses an example of a transfer from ORIGIN-CHAIN ​​to DESTINATION-CHAIN, where it will be issued as a swT \(wrapped\) token and sent to the recipient R in DESTINATION-CHAIN.
 
-![Image for post](https://lh5.googleusercontent.com/jDREPaqSddZi0FVW2ab_3-JeaEYOdGszTedu-abAiRRpQiHd57mquQMZk_U5Lmmu6YrD9ms0yEKVCMKp2Lhgx-Y1uyx8-8pJg1DJsS2rEi6uBr7e4QWoYSrpVxR7YUCNqLk-FIYB)
-
 SuSy origin-destination cross-chain transfer scheme.
 
 A user \(S\) interacts with the LU-PORT smart contract by transferring an amount \(A\) of the T token to it and specifying the recipient’s public address in DESTINATION-CHAIN. The gateway smart contract automatically creates a unique SWAP-ID and sets the registered status. The received funds are blocked on the LU-PORT smart contract.
@@ -109,37 +107,25 @@ Test recommendations: try deploying contracts & starting a node in customnet to 
 
 #### cmd/gravity/commands/ledger.go
 
-![](https://lh6.googleusercontent.com/NOjZH2agrUJsOcRCXy-uMMH80fhg5BRs6dMxGCR4BdrwaVPoG4ByyhKpucCJbAWKs3Cjoo_oTSIirgYURrBzWjrnSgGA3pKn44CS_j37LZ83d-hDLMherOGIwknizz5IWJJDiwUE)
-
 In the createApp function, a constructor for instantiation of a new adaptor should be provided. Consider putting your adaptor implementation in common/adaptors/\[chain\_name\].go. 
 
 #### common/adaptors/\[chain\_name\].go
-
-![](https://lh5.googleusercontent.com/QRNK8kFmISyPK-A6noQrbcFFoRy75CXCQPR9MUyZtuLCa8qdUlMtKlaMgOsVUof4s5JkbgIVmjkKxsjF49YllUAjhQrRJOg5q0DvuGhhs2aDVOAbkZ0kaVGRhkkf7O17urh_Ho-y)
 
 The most important part regarding communication with a specific chain is the IBlockchainAdaptor interface. 
 
 #### common/account/chain.go
 
-![](https://lh3.googleusercontent.com/CH_1gKb3udxXIXfWWt9fmPU2-3Y-j_aizFtQN_08e96-_cEYyFZN_DuDxVQxfgwJw_qFcw8rMvdLo6Jl8CmWTiZTlNSTMexfwDooBV_A-P40rhQA52kquu4IXbVpneZ2WvzrCrWz)
-
 Here, a constant should be provided and its behaviour in places where existing constants are mentioned should be implemented too.
 
 #### common/account/nebula.go
-
-![Imgur](https://lh5.googleusercontent.com/DYTAixery8RcLj4GYnTzvXtc4wJJn08IwconlAo28lJj85NIEJxCO7fYjI0syzl7uCZmv4XeqI4SUGm6FlJq_pA-rJ5zIGXDSGVq7K3ToqQVo5yKMwGD7NpyRtBEsC5vECar7acm)
 
 This part is responsible for Nebula logic.
 
 #### common/account/pubkey.go
 
-![Imgur](https://lh6.googleusercontent.com/ikUQKqgT4MEFDgESar92WnVh1RVobjhZdByBSreDjvtncJdR2nnDg4AAK4dpejdEXVAliChpwIs1Ts5-OcTRJde1qWBzNCSMvqgpAmi2P1lK0JPH0nKY4PpaNO54XqQl2YUF7JE6)
-
 Here, chain behaviour regarding account address instantiation is specified.
 
 #### common/storage/consuls.go
-
-![Imgur](https://lh4.googleusercontent.com/FaOgNO6xzzPRaKTuH7SyY1tTmhpNe1ToZ2V2a6B1b26rb8caovITraHDhQ6j7p1IJYw42GB-EXmuhMIDuvg1Ai8yfO2awzAkL4k7Mwn01PfrqPKxzdMGYWD06uQMohbToihfPc7V)
 
 This part is responsible for parsing of consul keys.
 
